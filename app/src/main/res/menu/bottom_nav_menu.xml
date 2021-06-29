@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_flags"
+        android:icon="@drawable/ic_flag_selector"
+        android:title="@string/title_flags" />
+
+    <item
+        android:id="@+id/navigation_saved"
+        android:icon="@drawable/ic_saved_selector"
+        android:title="@string/title_saved" />
+</menu>

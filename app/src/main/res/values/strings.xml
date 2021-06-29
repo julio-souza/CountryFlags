@@ -1,0 +1,10 @@
+<resources>
+    <string name="all_country_flags">Country Flags</string>
+
+    <string name="app_name">@string/all_country_flags</string>
+
+    <string name="title_flags">@string/all_country_flags</string>
+    <string name="title_saved">Saved Flags</string>
+
+
+</resources>
