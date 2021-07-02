@@ -1,0 +1,19 @@
+<resources>
+    <string name="all_country_flags">Country Flags</string>
+    <string name="all_ok">OK</string>
+
+    <string name="app_name">@string/all_country_flags</string>
+
+    <string name="title_flags">@string/all_country_flags</string>
+    <string name="title_saved">Saved Flags</string>
+    <string name="country_code">Country code</string>
+    <string name="find">find</string>
+
+    <string name="country_not_found_title">Country Not Found</string>
+    <string name="country_not_found_message">We couldn\'t find a country with the requested code.\nPlease, try a different one.</string>
+
+    <string name="invalid_country_code_title">Invalid Country Code</string>
+    <string name="invalid_country_code_message">The country code must follow the ISO 3166–1 alpha-2 (2 letter) pattern.\nPlease, try again with a valid code.</string>
+
+
+</resources>
