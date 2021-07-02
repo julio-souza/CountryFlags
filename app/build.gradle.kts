@@ -1,6 +1,7 @@
 plugins {
     id(BuildPlugin.androidApplication)
     id(BuildPlugin.kotlinAndroid)
+    kotlin(BuildPlugin.kotlinKapt)
 }
 
 android {
@@ -44,7 +45,7 @@ android {
     }
 
     buildFeatures {
-        dataBinding = true
+        viewBinding = true
     }
 
     sourceSets {
@@ -69,6 +70,7 @@ android {
 dependencies {
     //Android
     implementation(Dependencies.AndroidX.appcompat)
+    implementation(Dependencies.AndroidX.autofill)
     implementation(Dependencies.AndroidX.fragment)
     implementation(Dependencies.AndroidX.constraintLayout)
     implementation(Dependencies.AndroidX.ktxCore)
@@ -81,17 +83,25 @@ dependencies {
     implementation(Dependencies.Kotlin.core)
     implementation(Dependencies.Kotlin.coroutines)
 
+    //Room
+    implementation(Dependencies.AndroidX.room)
+    implementation(Dependencies.AndroidX.roomKtx)
+    kapt(Dependencies.AndroidX.roomCompiler)
+
     //Google
     implementation(Dependencies.Google.material)
-
-    //Facebook
-    implementation(Dependencies.Facebook.stetho)
 
     //Glide
     implementation(Dependencies.Bumptech.glide)
 
+    //Koin
+    implementation(Dependencies.Koin.android)
+
     //Square
     implementation(Dependencies.Square.retrofit)
+    implementation(Dependencies.Square.retrofitConverter)
+    implementation(Dependencies.Square.moshi)
+    implementation(Dependencies.Square.okHttpLogging)
 
     //Test)
     debugImplementation(Dependencies.Test.fragment) {
@@ -104,18 +114,6 @@ dependencies {
     testImplementation(Dependencies.Test.androidxRunner)
     testImplementation(Dependencies.Test.junit)
     testImplementation(Dependencies.Test.mockk)
-
-    // AndroidTest)
-    androidTestImplementation(Dependencies.Test.androidxCore)
-    androidTestImplementation(Dependencies.Test.androidxCoreArch)
-    androidTestImplementation(Dependencies.Test.androidxJunit)
-    androidTestImplementation(Dependencies.Test.androidxRunner)
-    androidTestImplementation(Dependencies.Test.androidxRules)
-    androidTestImplementation(Dependencies.Test.espressoCore)
-    androidTestImplementation(Dependencies.Test.junitKtx)
-    androidTestImplementation(Dependencies.Test.mockkAndroid) {
-        exclude(module = "objenesis")
-    }
-    androidTestImplementation(Dependencies.Test.objenesis)
+    testImplementation(Dependencies.Kotlin.coroutinesTest)
 
 }
